@@ -83,7 +83,7 @@ module.exports = function (db) {
           querySnapshop.forEach(i => { id = i.id });
 
           return db.collection('posts').doc(id).update(post).then(() => {
-            return res.status(200).send({ data: { menssage: 'se elimino el contenido' } });
+            return res.status(200).send({ data: { menssage: 'se actualizo el contenido' } });
           })
             .catch((error) => {
               console.log(error);
